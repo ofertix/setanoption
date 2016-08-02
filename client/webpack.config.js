@@ -7,7 +7,7 @@ module.exports = {
         extensions: ['', '.jsx', '.js', '.css', '.less' ]
     },
     entry: {
-        app: './app-store/app.jsx',
+        app: './app/app.jsx',
     },
     output: {
         path: './../web/assets/build/',
@@ -15,9 +15,6 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        preLoaders: [
-            { test:/\.jsx?$/, loader:'eslint', exclude: /node_modules/ },
-        ],
         loaders: [
             { test: /(\.js|\.jsx)$/, exclude: /node_modules/, loader: 'babel',
                 query: {
